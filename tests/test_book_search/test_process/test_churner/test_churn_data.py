@@ -14,11 +14,18 @@ class TestChurnData(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    def test_its_singleton(self):
-        churn_data_1 = ChurnData('bx_books')
-        churn_data_2 = ChurnData('bx_boo2ks')
+    def test_get_popular_items(self):
+        data = self.churn_data.get_popular_items()
+        print(data)
 
-        self.assertEqual(churn_data_1, churn_data_2)
+    # def test_its_singleton(self):
+    #     churn_data_1 = ChurnData('bx_books')
+    #     churn_data_2 = ChurnData('bx_boo2ks')
+    #
+    #     self.assertEqual(churn_data_1, churn_data_2)
+
+    # def test_correct_data(self):
+    #     self.churn_data.correct_data()
 
 
 if __name__ == '__main__':

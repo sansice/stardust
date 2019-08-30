@@ -2,6 +2,8 @@ import copy
 import numpy
 import pandas
 import logging
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 from book_search.process.churner.process_data import ProcessData
 from book_search.process.utils import const
@@ -80,6 +82,10 @@ class ProcessBXBooksData(ProcessData):
         self.books_info.loc[(self.books_info.yearOfPublication > 2006) | (self.books_info.yearOfPublication == 0), 'yearOfPublication'] = numpy.NAN
         self.books_info.yearOfPublication.fillna(round(self.books_info.yearOfPublication.mean()), inplace=True)
         self.books_info.yearOfPublication = self.books_info.yearOfPublication.astype(numpy.int32)
+
+    def plot_ratings(self):
+        sns.countplot(data=self.get_explicit_ratings(), x='bookRating')
+        plt.show()
 
     def print_data(self):
         # unique_yop = self.books_info.yearOfPublication.unique()

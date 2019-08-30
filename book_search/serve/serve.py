@@ -1,14 +1,18 @@
 # from search.word_cloud.word_cloud import WordClouds
 from flask import render_template, Blueprint, request, jsonify
-
+from book_search.process.churner.churn_data import ChurnData
 
 serve_blueprint = Blueprint('serve', __name__)
 @serve_blueprint.route('/')
 def index():
-    return render_template("index.html", url="localhost", port="5000")
+    churn_data = ChurnData('bx_books')
+    most_popular_items = churn_data.get_popular_items()
+    return render_template("index.html", url="localhost", port="5000", items=most_popular_items)
 
 
-@serve_blueprint.route('/result', methods=['POST', 'GET'])
+@serve_blueprint.route('/process', methods=['POST', 'GET'])
 def index_post():
-    text = request.args.get('book', None)
-    return str(text).upper()
+    churn_data = ChurnData('bx_books')
+    most_popular_items = churn_data.get_popular_items()
+    # text = request.args.get('search_text', None)
+    return str(most_popular_items)

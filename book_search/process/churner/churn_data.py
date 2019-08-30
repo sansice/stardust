@@ -9,9 +9,14 @@ class ChurnData(metaclass=utils.Singleton):
     def __init__(self, data_type):
         data_factory = DataFactory()
         self.data_object = data_factory.get_data_object(data_type)
+        self.recommender = data_factory.get_recommender_object(data_type, self.data_object)
+        self.correct_data()
 
     def correct_data(self):
         self.data_object.skim_data()
+
+    def get_popular_items(self):
+        return self.recommender.get_popular_items()
 
 
 # print(books_raw.shape)

@@ -22,7 +22,11 @@ class TestProcessBXBooksData(unittest.TestCase):
 
     # def test_check_sparcity(self):
     #     pass
-    #     self.bk_books_data_processor.print_data()
+    #     self.bk_books_data_processor.plot_ratings()
+
+    def test_get_explicit_ratings(self):
+        explicit_ratings = self.bk_books_data_processor.get_explicit_ratings()
+        print(explicit_ratings)
 
 
 if __name__ == '__main__':

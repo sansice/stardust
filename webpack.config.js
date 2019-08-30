@@ -1,5 +1,6 @@
 var path = require('path');
 module.exports = {
+    devtool: 'eval-source-map',
     entry: './book_search/web/js/index.jsx',
     mode: 'development',
     watch: true,
