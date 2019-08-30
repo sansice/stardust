@@ -1,0 +1,26 @@
+{
+  "name": "stardust",
+  "version": "1.0.0",
+  "description": "A sample ML project with Flask, D3 and React",
+  "main": "../book_search/web/public/index.html",
+  "author": "Shanno",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7"
+  }
+}

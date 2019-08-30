@@ -1,11 +1,11 @@
 import React from 'react';
 import { HashRouter, Route, hashHistory } from 'react-router-dom';
-import Home from './components/Home';
+import Start from './react_comp/Start';
 // import more components
 export default (
-    <HashRouter history={hashHistory}>
+    <HashRouter>
      <div>
-      <Route path='/' component={Home} />
+      <Route path='/' component={Start} />
      </div>
     </HashRouter>
 );
