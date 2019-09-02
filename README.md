@@ -1,68 +1,61 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Agenda: 
 
-## Available Scripts
+To integrate the ML with Flask Web App and React. 
 
-In the project directory, you can run:
+ 
 
-### `npm start`
+Steps to get the POC running 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Clone the project -  
 
-### `npm test`
+Location in git - https://github.com/sansice/stardust.git 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Docker image - docker pull sansice/stardust 
 
-### `npm run build`
+ 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Setup the Eco-System 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Installations 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install Node js - (https://nodejs.org/en/) 
 
-### `npm run eject`
+Get python 3.7 (https://www.python.org/downloads/) 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Get Yarn - (https://yarnpkg.com/en/docs/install#windows-stable) 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Commands 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Cd to the folder – cd stardust 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Setup Virtual Python Env - py -m pip install --user virtualenv 
 
-## Learn More
+Get Python libs-  venv\Scripts\python.exe -m pip install -r reqs.txt 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run the cmd – yarn install 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Starting the project 
 
-### Code Splitting
+To view the web page - venv\Scripts\python.exe book_search/start.py 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+To view the Java script changes - yarn run webpack --watch –progress 
 
-### Analyzing the Bundle Size
+ 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+View the project -
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+http://localhost:5000
+ 
 
-### Advanced Configuration
+Reference -  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Below link is just a reference of the training and sample dataset  download. 
 
-### Deployment
+https://towardsdatascience.com/my-journey-to-building-book-recommendation-system-5ec959c41847 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+For Learn ML  down load Data set from 
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+https://www.kaggle.com/   for different Business domain. 
