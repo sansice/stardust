@@ -25,7 +25,7 @@ Docker image pull cmd - ```docker pull sansice/stardust ```
 
  * [python 3.7](https://www.python.org/downloads/) - Install Regular Python 
 
- * [Yarn] (https://yarnpkg.com/en/docs/install#windows-stable) - Yarn for managing package 
+ * [Yarn](https://yarnpkg.com/en/docs/install#windows-stable) - Yarn for managing package 
 
 ### Commands 
 
