@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import TitleHeader from './TitleHeader'
 import GetUserInput from './GetUserInput'
 import Recommended from './RecommendedItems'
+import TableDisplay from './TableDisplay'
 
 export default class Start extends Component {
     constructor(props) {
         super(props);
         this.set_proceesed_text = this.set_proceesed_text.bind(this);
-        this.state = {processed_text: '[{"text": "", "value": 11}]'};
+        this.state = {processed_text: '[{"name": "", "author": "", "yop": "", "publisher": "", "isbn": "", "ratings": ""}]'};
     };
 
     set_proceesed_text(text){
@@ -30,7 +31,7 @@ export default class Start extends Component {
                         <td>
                             <TitleHeader />
                             <GetUserInput url={url} port={port} homeCallBack={this.set_proceesed_text}/>
-                            <Recommended processed_text={this.state.processed_text} />
+                            <TableDisplay processed_text={this.state.processed_text} />
                         </td>
                     </tr>
                 </tbody>

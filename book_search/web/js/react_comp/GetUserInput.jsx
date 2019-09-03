@@ -38,7 +38,7 @@ export default class GetUserInput extends Component {
                 <tbody>
                     <tr>
                         <td>
-                            <textarea id="input_textarea" rows = "1" cols = "30"></textarea>
+                            <input type="number" id="input_textarea" ></input>
                         </td>
                     </tr>
                     <tr align="center">

@@ -10,13 +10,17 @@ class ChurnData(metaclass=utils.Singleton):
         data_factory = DataFactory()
         self.data_object = data_factory.get_data_object(data_type)
         self.recommender = data_factory.get_recommender_object(data_type, self.data_object)
-        self.correct_data()
-
-    def correct_data(self):
         self.data_object.skim_data()
 
     def get_popular_items(self):
         return self.recommender.get_popular_items()
+
+    def recommend_item(self, user_id):
+        # self.data_object.users.
+        # for item
+        return self.recommender.recommend_item(user_id)
+
+
 
 
 # print(books_raw.shape)

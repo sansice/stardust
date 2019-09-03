@@ -13,6 +13,12 @@ def index():
 @serve_blueprint.route('/process', methods=['POST', 'GET'])
 def index_post():
     churn_data = ChurnData('bx_books')
-    most_popular_items = churn_data.get_popular_items()
-    # text = request.args.get('search_text', None)
-    return str(most_popular_items)
+    search_text = request.args.get('search_text', None)
+    return_table = ""
+
+    if search_text is None or search_text.strip() == "":
+        return_table = churn_data.get_popular_items()
+    else:
+        return_table = churn_data.recommend_item(search_text)
+
+    return str(return_table)
